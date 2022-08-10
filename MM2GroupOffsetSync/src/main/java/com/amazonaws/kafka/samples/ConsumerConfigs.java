@@ -20,6 +20,7 @@ class ConsumerConfigs {
     private static final String GROUP_ID_CONFIG = "mm2OffsetSync";
     private static final String CLIENT_ID_CONFIG = "mm2OffsetSync";
     private static final String EXCLUDE_INTERNAL_TOPICS = "true";
+    private static final String SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG = "https";
 
     private static boolean sslEnable = false;
     private static boolean mTLSEnable = false;
@@ -54,6 +55,7 @@ class ConsumerConfigs {
                 consumerProps.setProperty(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, loadProps.getProperty("SSL_KEYSTORE_LOCATION_CONFIG", SSL_KEYSTORE_LOCATION_CONFIG).equals("") ? SSL_KEYSTORE_LOCATION_CONFIG : loadProps.getProperty("SSL_KEYSTORE_LOCATION_CONFIG", SSL_KEYSTORE_LOCATION_CONFIG));
                 consumerProps.setProperty(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, loadProps.getProperty("SSL_KEYSTORE_PASSWORD_CONFIG", SSL_KEYSTORE_PASSWORD_CONFIG).equals("") ? SSL_KEYSTORE_PASSWORD_CONFIG : loadProps.getProperty("SSL_KEYSTORE_PASSWORD_CONFIG", SSL_KEYSTORE_PASSWORD_CONFIG));
                 consumerProps.setProperty(SslConfigs.SSL_KEY_PASSWORD_CONFIG, loadProps.getProperty("SSL_KEY_PASSWORD_CONFIG", SSL_KEY_PASSWORD_CONFIG).equals("") ? SSL_KEY_PASSWORD_CONFIG : loadProps.getProperty("SSL_KEY_PASSWORD_CONFIG", SSL_KEY_PASSWORD_CONFIG));
+                consumerProps.setProperty(SslConfigs.SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG, loadProps.getProperty("SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG", SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG).equals("") ? SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG : loadProps.getProperty("SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG", SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG));
             }
             //consumerProps.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG,  "");
 
@@ -70,6 +72,7 @@ class ConsumerConfigs {
                 consumerProps.setProperty(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, SSL_KEYSTORE_LOCATION_CONFIG);
                 consumerProps.setProperty(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, SSL_KEYSTORE_PASSWORD_CONFIG);
                 consumerProps.setProperty(SslConfigs.SSL_KEY_PASSWORD_CONFIG, SSL_KEY_PASSWORD_CONFIG);
+                consumerProps.setProperty(SslConfigs.SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG, SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG);
             }
 
         }

@@ -33,6 +33,7 @@ class MM2Config {
             mm2Props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, ConsumerConfigs.consumerConfig().getProperty(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG));
             mm2Props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, ConsumerConfigs.consumerConfig().getProperty(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG));
             mm2Props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, ConsumerConfigs.consumerConfig().getProperty(SslConfigs.SSL_KEY_PASSWORD_CONFIG));
+            mm2Props.put(SslConfigs.SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG, ConsumerConfigs.consumerConfig().getProperty(SslConfigs.SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG));
         }
         if (!MM2GroupOffsetSync.replicationPolicyClass.equalsIgnoreCase(String.valueOf(MirrorClientConfig.REPLICATION_POLICY_CLASS_DEFAULT))){
             mm2Props.put(MirrorClientConfig.REPLICATION_POLICY_CLASS, MM2GroupOffsetSync.replicationPolicyClass);
