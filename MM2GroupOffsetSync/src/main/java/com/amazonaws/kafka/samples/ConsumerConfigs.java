@@ -20,7 +20,7 @@ class ConsumerConfigs {
     private static final String GROUP_ID_CONFIG = "mm2OffsetSync";
     private static final String CLIENT_ID_CONFIG = "mm2OffsetSync";
     private static final String EXCLUDE_INTERNAL_TOPICS = "true";
-    private static final String SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG = "https";
+    private static final String SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG = "";
 
     private static boolean sslEnable = false;
     private static boolean mTLSEnable = false;
